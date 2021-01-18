@@ -359,8 +359,8 @@ pub fn simplify_branch_conditions(expr: &mut Expr) {
 ///
 /// let us = 1;
 /// let us#1 = 2;
-/// let us#1 = 3;
-/// let us#1 = 4;
+/// let us#2 = 3;
+/// let us#3 = 4;
 /// us + us#1 + us#2
 ///
 pub fn unroll_structs(expr: &mut Expr) {

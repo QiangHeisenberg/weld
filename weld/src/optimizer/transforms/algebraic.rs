@@ -1007,7 +1007,7 @@ fn is_even(e: &Expr) -> bool {
         } => {
             use crate::ast::BinOpKind::*;
             match k {
-                Add | Subtract => is_even(l) && is_even(r), // TODO || (is_odd(l) && is_odd(r))
+                Add | Subtract => (is_even(l) && is_even(r)) || (!is_even(l) && !is_even(r)), 
                 Min | Max => is_even(l) && is_even(r),
                 Multiply => is_even(l) || is_even(r),
                 Pow => is_even(l),
