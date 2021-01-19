@@ -122,7 +122,7 @@ class NumPyEncoder(WeldObjectEncoder):
             elif obj.ndim == 1 and obj.dtype == 'bool':
                 numpy_to_weld = self.utils.numpy_to_weld_bool_arr
             else:
-                numpy_to_weld = self.utils.numpy_to_weld_char_arr_arr
+                numpy_to_weld = self.utils.numpy_to_weld_int16_arr_arr
         elif isinstance(obj, str):
             numpy_to_weld = self.utils.numpy_to_weld_char_arr
         else:
